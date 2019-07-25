@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="不定时更新大数据技术文档，原创小说，以及有关于Digital History的一些文献翻译">
+    <meta name="keywords"  content="弦望晦朔,Rabbit,Digtal History, 大数据, 博客, 个人网站">
+    <meta name="theme-color" content="#000000">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="鲸 | Whale - 弦望晦朔的博客 | Maybe A Rabbit's Blog">
+    
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="4
+
+">
+    
+    <meta property="article:published_time" content="2019-07-25T22:00:00Z">
+    
+    
+    <meta property="article:author" content="弦望晦朔">
+    
+    
+    <meta property="article:tag" content="原创小说">
+    
+    
+    <meta property="og:image" content="http://localhost:4000/img/avatar-hux-ny.jpg">
+    <meta property="og:url" content="http://localhost:4000/2019/07/25/Whale-2/">
+    <meta property="og:site_name" content="弦望晦朔的博客 | Maybe A Rabbit's Blog">
+    
+    <title>鲸 | Whale - 弦望晦朔的博客 | Maybe A Rabbit's Blog</title>
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/pwa/manifest.json">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/mars.ico">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="http://localhost:4000/2019/07/25/Whale-2/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Mars Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li>
+                        <a href="/about/">About</a>
+                    </li>
+                    
+                    
+                    
+                    <li>
+                        <a href="/archive/">Archive</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    var __HuxNav__ = {
+        close: function(){
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        },
+        open: function(){
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+
+    // Bind Event
+    $toggle.addEventListener('click', function(e){
+        if ($navbar.className.indexOf('in') > 0) {
+            __HuxNav__.close()
+        }else{
+            __HuxNav__.open()
+        }
+    })
+
+    /**
+     * Since Fastclick is used to delegate 'touchstart' globally
+     * to hack 300ms delay in iOS by performing a fake 'click',
+     * Using 'e.stopPropagation' to stop 'touchstart' event from 
+     * $toggle/$collapse will break global delegation.
+     * 
+     * Instead, we use a 'e.target' filter to prevent handler
+     * added to document close HuxNav.  
+     *
+     * Also, we use 'click' instead of 'touchstart' as compromise
+     */
+    document.addEventListener('click', function(e){
+        if(e.target == $toggle) return;
+        if(e.target.className == 'icon-bar') return;
+        __HuxNav__.close();
+    })
+</script>
+
+
+    <!-- Image to hack wechat -->
+<!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="/img/post/post-bg-whale-2.jpg" width="0" height="0"> -->
+
+<!-- Post Header -->
+
+
+
+<style type="text/css">
+    header.intro-header{
+        position: relative;
+        background-image: url('/img/post/post-bg-whale-2.jpg');
+        background: ;
+    }
+
+    
+</style>
+
+<header class="intro-header" >
+
+    <div class="header-mask"></div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/archive/?tag=%E5%8E%9F%E5%88%9B%E5%B0%8F%E8%AF%B4" title="原创小说">原创小说</a>
+                        
+                    </div>
+                    <h1>鲸 | Whale</h1>
+                    
+                    <h2 class="subheading">1-2</h2>
+                    <span class="meta">Posted by 弦望晦朔 on July 25, 2019</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <!-- Multi-Lingual -->
+                
+
+				<h1 id="4">4</h1>
+
+<p>我不再抬头看那只遮住了太阳的鲸鱼，低下头，逐渐合上眼，打算平静的迎来这最后一刻。</p>
+
+<p><strong>“不是说人死之前会像走马灯一样的回放这一生的剧情吗？”</strong></p>
+
+<p><strong>“……算了没法回放。”</strong></p>
+
+<p><strong>“究竟是哪里错了呢？……”</strong></p>
+
+<p><strong>“计算不应该有问题的，我们已经想到了所有的情况……”</strong></p>
+
+<p><strong>“……”</strong></p>
+
+<p><strong>“难道是……时间选择错误了？”</strong></p>
+
+<p><strong>“时间吗……？”</strong></p>
+
+<p>想到这里，我猛地睁开了眼，看向原本是入口的地方，那里突然出现了一个巨大的白底黑针的时钟，时间从3点快速推移到了6点，那里出现了一片小小的岛屿，而在那片岛屿上站着的，是昨天约定好了，但迟迟没有出现的陆，他似乎看不到我，也是，这是未来的场景吧。很意外，我的心里没有被背叛的愤怒，反而有一点点心疼。尽管他面无表情，但我不知道为什么，还是感受到了他的悲伤。</p>
+
+<p>随着鲸鱼的落下，我的眼前只剩下了一片黑暗，世上的一切再与我无关。</p>
+
+<p>剧烈的咳嗽使我从睡梦中醒来，仿佛大量的水呛到肺中，要将它咳出来一般。许久，我看了看手机上的时间，7点24分，该上课了。</p>
+
+<h1 id="5">5</h1>
+
+<p>陈身高1.76m，留一头碎发，总是穿一身运动休闲装，活脱脱一个运动型少年的打扮。但与这样青春活力的打扮不符的是，他平时总是独来独往，看样子与我一样，也没有什么可以称得上是朋友的人，但陆偶尔会去找他商讨一些问题。</p>
+
+<p>陆与我们都不同，在交际方面很受欢迎，为人正直，乐于助人，举止优雅得体，言谈中也透露着很好的教养，夸张一点来说，是那种能在《中学生评价手册》中完全贴合评语的人，除此以外，脑袋也很聪明，不然我想不至于能跟陈那种怪人交谈，要我用一个词来形容陆的话，众星拱月这词绝不算过分。</p>
+
+<p>自上一次陈和我说过那些没头没脑的话之后，已经过去了一周了，在这一周里，我虽然自以为找到了一些线索，但仍旧没能够寻找出那副“<u>重要的</u>”画。</p>
+
+<p>提到罗素，又说是介乎神学与科学之间，这一点我想很好回答，就是哲学。但是实际上，在这一层楼的画中，有关于哲学的画作实在是太多了，更别说是带上了“起源”这一名称的哲学，那甚至连神学也可以包含在内。</p>
+
+<p>“每一种大的宗教就是某种哲学加上一定的上层建筑，包括迷信、教义、礼仪和体制。”不知道为什么，突然想起了冯友兰这句话。</p>
+
+<p>若是按这个逻辑的话，那古埃及文明的宗教算是感性？苏美尔文明的宗教算是理性？随着时间推移将文明传向古希腊的土地上？催生了巴库斯精神及奥尔弗斯精神，他们或许都算感性的精神吧？</p>
+
+<p>那再之后呢？理性是什么？……</p>
+
+<p>坐在我前面的佟突然转身看着我，我回报以迷茫的眼神。</p>
+
+<p>诶？怎么大家都看着我？</p>
+
+<p>“别走神了，起来回答问题！用正弦定理回答一下这个三角形外接圆的面积！”台上的老师似乎对我上课走神这件事非常不满。</p>
+
+<p>我站了起来，看了看题，顷刻，向老师表示没法作答，老师似乎很生气，走到我的身边，“出去站会儿！”</p>
+
+<p>真是的，一把年纪了，还在充满理性知识的课堂里这么任由着自己的感性情绪上头。我这么想。</p>
+
+<p>等等？我似乎懂了什么叫做理性与感性的交汇了，困扰我一周的问题，似乎可以解决了！？</p>
+
+<h1 id="6">6</h1>
+
+<p>如果我没想错的话，感性算是宗教精神，或者说是，超自然的内容？而纯粹的理性，应该是自数学始的，那么把他们结合起来，以构成此种哲学的起源就应该是毕达哥拉斯了。</p>
+
+<p>我来到了《雅典学院》前，居于这幅画左下方的就是我要找的毕达哥拉斯。</p>
+
+<p>我静静地看着这幅画，所以呢？它哪里表现出了它是<u>重要的</u>呢？不过只是理性主义与神秘主义的交织罢了。理性与感性永远交织在人类发展的历史中，理性给人以已知，而感性给人以未知，正是因为它们相互交织，这个世界才显得有趣而又生机勃勃。</p>
+
+<p>这画是有趣的，但重要何从谈起，我不知道，或许是我太认真对待陈的笑话了。</p>
+
+<p>我最后看了一眼这幅画，正准备要走，等等！为什么这幅画里，亚里士多德的手是指向天的，我如果没记错的话，亚里士多德在这幅画里手应该是指向地的，为什么他的手指向了天？</p>
+
+<p>我顺着他的手指向的方向看了上去，在拱券中轴的第三格棱中，写着一个“3”，这个3，也是原先所没有的，为什么没有察觉到呢？</p>
+
+<p>我伸手去触碰，好像那个“3”附近的材质与整幅画的材质有所差别，有一个小小的棱角，似乎可以撕下来。</p>
+
+<p>我环顾四周，好！没有人！撕下来！</p>
+
+<p>不知道用什么材料做的，但在另一面有一个封装的很好的小纸条。</p>
+
+<p>这就是陈说的<u>重要的</u>吗？我先打开看看吧。</p>
+
+<p>“我就知道我的直觉没有错，你一定会找到这个的！”熟悉的声音又一次不期而遇。</p>
+
+<p>“你跟踪我？”我有点恼。</p>
+
+<p>“别把人说的这么变态好吗，我只是觉得你差不多得出答案了，所以就跟着你过来看了看，没想到你果然得出了答案。”陈还是那副自顾自的模样，完全不注意眼前人是否因为自己的行为而感到困扰。</p>
+
+<p>“不管怎么样，你跟踪我这事是事实。”我没打算接他的话。</p>
+
+<p>“先不谈我有没有跟踪你这件事，我的直觉果然是对的，你果然找到了，你不好奇那纸条上写的是什么吗？不如让我们先看看这个！”陈似乎还是没有感觉到我生气了。</p>
+
+<p>“我很好奇，但是你跟踪我，所以我打算看，但不打算和你一起看。”想想就觉得可怕，一个男人跟踪另一个男人这事。</p>
+
+<p>“你别这样嘛，我真没有恶意的，那这样，作为道歉，我可以和你说说我是怎么发现这个东西的？”陈终于意识到了现在的气氛不太妙。</p>
+
+<p>“行，视你讲的故事我可以考虑原不原谅你，毕竟纸条在我手上。”我晃了晃手中的纸条。</p>
+
+<p>“我觉得你也看出来了，我这人吧，一般不喜欢和那些没意思的家伙打交道，所以呢，我就总是一个人在找一些有趣的事情去做，就比方说在学校里闲逛，在草地上躺着看天，或者睡个午觉，要不然就看看学校里的猫狗大战呀什么的……”</p>
+
+<p>“说重点！”我没想到，一开始看着挺高冷的人，没接触过两回就话唠成了这样，而且说话完全没有重点。</p>
+
+<p>“好好好，你这不能仗着你有纸条就对我呼来喝去的吧，我也是要面子的。后来，有一天我坐在路边发呆，那时候我刚解决了一个很难的问题！哦，我一般解决完这种问题以后都会发呆的，当然，是为了让发呆没有罪恶感，所以才解决问题的。然后发着呆发着呆，我就发现了一点不太对劲的事，眼前的世界好像有点不和谐。”</p>
+
+<p>“<u>不和谐</u>？”我有点疑惑，打断了他。</p>
+
+<p>“是的，<u>不和谐</u>，《巴别塔》吧，好像是叫这名字。”</p>
+
+<p>我脑海中大概有印象，点头示意他继续说。</p>
+
+<p>“别的画都是正的，就只有它是歪的，这样说好像不太对，大概是，其他的画都是中轴对称的，而只有它，在中轴对称的时候稍有倾斜。”</p>
+
+<p>经他一提示，我身后突然涌起一丝寒意，我居然没有发现学校里的画，都是中轴对称或是类中轴对称的，为什么之前没有发现这一点呢。</p>
+
+<p>“然后我就过去看了看，感觉画上有个明显不和谐的地方，我把它弄下来，是个纸条，纸条上就写了两句话，一句就是我上次给你的提示：理性与感性的交汇，介乎神学与科学……”</p>
+
+<p>“另一句呢？”没等他说完，我就打断了他。</p>
+
+<p>“欢迎来到新世界。”他回答。</p>
+
+<p>“所以，你那个纸条上应该是写了‘1’的编号吧？”</p>
+
+<p>“没有，纸条上没有数字，只有这两句话。你这么问的话，这张纸条上应该写了2吧？”他察觉了我话里的意思。</p>
+
+<p>我把写有3的那一面展示给他看，然后他的表情，由惊讶，转到喜悦，逐渐兴奋。</p>
+
+<p>“你看！这果然很重要不是吗？”</p>
+
+<p>“我不是很懂你对重要的这个词的定义，但我觉得你似乎认为这东西非常有趣？”</p>
+
+<p>“有趣的就是重要的！”陈这么回答。</p>
+
+<p>我没有回复他，低头看了看手里写有3的纸条，不知道为什么，疑虑的种子突然在我心中种下，并生根发芽，让我对这整件事开始有了抗拒。一个神神叨叨的人，和一场不明不白的探索，以及在画里好像注视着这一切的乌尔诺宾大公的眼，这怎么看，都让我只想逃离。</p>
+
+
+                <hr style="visibility: hidden;">
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2019/07/25/Whale-1/" data-toggle="tooltip" data-placement="top" title="鲸 | Whale">
+                        Previous<br>
+                        <span>鲸 | Whale</span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2019/07/25/Whale-3/" data-toggle="tooltip" data-placement="top" title="鲸 | Whale">
+                        Next<br>
+                        <span>鲸 | Whale</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <hr style="visibility: hidden;">
+
+                
+
+                
+            </div>  
+
+    <!-- Side Catalog Container -->
+        
+
+    <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+
+
+<section>
+    
+        <hr class="hidden-sm hidden-xs">
+    
+    <h5><a href="/archive/">FEATURED TAGS</a></h5>
+    <div class="tags">
+        
+        
+        
+        </a>
+        
+        
+                <a data-sort="0001" 
+                    href="/archive/?tag=%E5%8E%9F%E5%88%9B%E5%B0%8F%E8%AF%B4"
+                    title="原创小说"
+                    rel="4">原创小说
+    </div>
+</section>
+
+
+                <!-- Friends Blog -->
+                
+<hr>
+<h5>FRIENDS</h5>
+<ul class="list-inline">
+  
+  <li><a href="https://github.com/AliceSang369">AliceSang369's GitHub</a></li>
+  
+  <li><a href="https://github.com/Dang-h">Dang-h's GitHub</a></li>
+  
+</ul>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- add support for mathjax by voleking-->
+
+
+
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("//cdnjs.cloudflare.com/ajax/libs/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- SNS Link -->
+                
+
+
+<ul class="list-inline text-center">
+
+
+  
+  
+  
+  
+  
+  
+  <li>
+    <a target="_blank" href="https://github.com/835066087">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+</ul>
+
+                <p class="copyright text-muted">
+                    Copyright &copy; Mars Blog 2019
+                    <br>
+                    Powered by <a href="https://github.com/835066087">Mars Blog</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=huxpro&repo=huxpro.github.io&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<!-- Currently, only navbar scroll-down effect at desktop still depends on this -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js "></script>
+
+<!-- Service Worker -->
+
+<script src="/js/snackbar.js "></script>
+<script src="/js/sw-registration.js "></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!--
+     Because of the native support for backtick-style fenced code blocks
+     right within the Markdown is landed in Github Pages,
+     From V1.6, There is no need for Highlight.js,
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/
+     - https://github.com/jneen/rouge/wiki/list-of-supported-languages-and-lexers
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+
+
+
+<!--fastClick.js -->
+<script>
+    async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+
+<!-- Side Catalog -->
+
+
+
+<!-- Multi-Lingual -->
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>
