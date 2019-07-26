@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="不定时更新大数据技术文档，原创小说，以及有关于Digital History的一些文献翻译">
+    <meta name="keywords"  content="弦望晦朔,Rabbit,Digtal History, 大数据, 博客, 个人网站">
+    <meta name="theme-color" content="#000000">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="2018-2019年阅读与整理清单 - 弦望晦朔的博客 | Maybe A Rabbit's Blog">
+    
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="前言
+
+">
+    
+    <meta property="article:published_time" content="2019-07-26T17:00:00Z">
+    
+    
+    <meta property="article:author" content="弦望晦朔">
+    
+    
+    <meta property="article:tag" content="读书清单">
+    
+    
+    <meta property="og:image" content="http://localhost:4000/img/avatar-hux-ny.jpg">
+    <meta property="og:url" content="http://localhost:4000/2019/07/26/list-1/">
+    <meta property="og:site_name" content="弦望晦朔的博客 | Maybe A Rabbit's Blog">
+    
+    <title>2018-2019年阅读与整理清单 - 弦望晦朔的博客 | Maybe A Rabbit's Blog</title>
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/pwa/manifest.json">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/mars.ico">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="http://localhost:4000/2019/07/26/list-1/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Mars Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li>
+                        <a href="/about/">About</a>
+                    </li>
+                    
+                    
+                    
+                    <li>
+                        <a href="/archive/">Archive</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    var __HuxNav__ = {
+        close: function(){
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        },
+        open: function(){
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+
+    // Bind Event
+    $toggle.addEventListener('click', function(e){
+        if ($navbar.className.indexOf('in') > 0) {
+            __HuxNav__.close()
+        }else{
+            __HuxNav__.open()
+        }
+    })
+
+    /**
+     * Since Fastclick is used to delegate 'touchstart' globally
+     * to hack 300ms delay in iOS by performing a fake 'click',
+     * Using 'e.stopPropagation' to stop 'touchstart' event from 
+     * $toggle/$collapse will break global delegation.
+     * 
+     * Instead, we use a 'e.target' filter to prevent handler
+     * added to document close HuxNav.  
+     *
+     * Also, we use 'click' instead of 'touchstart' as compromise
+     */
+    document.addEventListener('click', function(e){
+        if(e.target == $toggle) return;
+        if(e.target.className == 'icon-bar') return;
+        __HuxNav__.close();
+    })
+</script>
+
+
+    <!-- Image to hack wechat -->
+<!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="/img/post/post-bg-list-1.jpg" width="0" height="0"> -->
+
+<!-- Post Header -->
+
+
+
+<style type="text/css">
+    header.intro-header{
+        position: relative;
+        background-image: url('/img/post/post-bg-list-1.jpg');
+        background: ;
+    }
+
+    
+</style>
+
+<header class="intro-header" >
+
+    <div class="header-mask"></div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/archive/?tag=%E8%AF%BB%E4%B9%A6%E6%B8%85%E5%8D%95" title="读书清单">读书清单</a>
+                        
+                    </div>
+                    <h1>2018-2019年阅读与整理清单</h1>
+                    
+                    <h2 class="subheading">一年的阅读与整理清单</h2>
+                    <span class="meta">Posted by 弦望晦朔 on July 26, 2019</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <!-- Multi-Lingual -->
+                
+
+				<h1 id="前言">前言</h1>
+
+<p>有一次答应桑桑说要把自己过去一年的书单发给她看，一来是为了告诉桑桑我在看些什么，二来是也作为自己的一个监督手段，结果一直拖延到了现在才整理出来。</p>
+
+<p>这份书单从2018年4月起，到2019年7月结束，作为一个阶段性总结。其中需要做说明的有三个部分，第一个部分，阅读书籍，每个人都会对书籍有自己的价值判断与取向，在<code class="highlighter-rouge">已读书目</code>中，我将自己推荐阅读的书进行<strong>加粗</strong>标识，至于推荐标志，我想一句话概括就是：在该领域提供给我了新视野，使我掌握了新方法；第二个部分是<code class="highlighter-rouge">结束日期</code>，阅读完后有笔记留存的，则该栏<strong>加粗</strong>标识，若无<strong>加粗</strong>标识，则无笔记留存，仅做了阅读；第三个部分是<code class="highlighter-rouge">书目种类</code>，在这一版次的<code class="highlighter-rouge">书目种类</code>中，所有的书目种类都基于我自己的分类方式，在下一年的版次中，分类方式应该会替换为<code class="highlighter-rouge">中图分类法</code>。</p>
+
+<h1 id="阅读书目">阅读书目</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">已读书目</th>
+      <th style="text-align: center">作者</th>
+      <th style="text-align: center">阅读日期</th>
+      <th style="text-align: center">结束日期</th>
+      <th style="text-align: center">书目种类</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">人生十论</td>
+      <td style="text-align: center">钱穆</td>
+      <td style="text-align: center">2018-5</td>
+      <td style="text-align: center">2018-5</td>
+      <td style="text-align: center">散文杂记</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">中国建筑史</td>
+      <td style="text-align: center">梁思成</td>
+      <td style="text-align: center">2018-5</td>
+      <td style="text-align: center"><strong>2018-5</strong></td>
+      <td style="text-align: center">建筑史</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>中国古代史（上）</strong></td>
+      <td style="text-align: center">朱绍侯等</td>
+      <td style="text-align: center">2018-5</td>
+      <td style="text-align: center"><strong>2018-12</strong></td>
+      <td style="text-align: center">历史学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>中国古代史（下）</strong></td>
+      <td style="text-align: center">朱绍侯等</td>
+      <td style="text-align: center">2018-6</td>
+      <td style="text-align: center"><strong>2018-12</strong></td>
+      <td style="text-align: center">历史学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>中国史学名著</strong></td>
+      <td style="text-align: center">钱穆</td>
+      <td style="text-align: center">2018-5</td>
+      <td style="text-align: center"><strong>2018-5</strong></td>
+      <td style="text-align: center">历史学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">奇特的一生</td>
+      <td style="text-align: center">格拉宁（俄）</td>
+      <td style="text-align: center">2018-4</td>
+      <td style="text-align: center">2018-4</td>
+      <td style="text-align: center">时间管理类</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">大学生如何写毕业论文</td>
+      <td style="text-align: center">翁贝托·埃科（意)</td>
+      <td style="text-align: center">2018-4</td>
+      <td style="text-align: center">2018-4</td>
+      <td style="text-align: center">经验类</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">把时间留给重要的事</td>
+      <td style="text-align: center">洛塔尔·赛韦特（德）</td>
+      <td style="text-align: center">2018-4</td>
+      <td style="text-align: center">2018-4</td>
+      <td style="text-align: center">时间管理类</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">精力管理</td>
+      <td style="text-align: center">吉姆·洛尔等（美）</td>
+      <td style="text-align: center">2018-4</td>
+      <td style="text-align: center">2018-4</td>
+      <td style="text-align: center">时间管理类</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">搞定123</td>
+      <td style="text-align: center">戴维·艾伦（美）</td>
+      <td style="text-align: center">2018-4</td>
+      <td style="text-align: center">2018-4</td>
+      <td style="text-align: center">时间管理类</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">史料与史学</td>
+      <td style="text-align: center">翦伯赞</td>
+      <td style="text-align: center">2018-6</td>
+      <td style="text-align: center">2018-6</td>
+      <td style="text-align: center">历史学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>中国历代政治得失</strong></td>
+      <td style="text-align: center">钱穆</td>
+      <td style="text-align: center">2018-6</td>
+      <td style="text-align: center"><strong>2018-6</strong></td>
+      <td style="text-align: center">历史学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">史学方法导论</td>
+      <td style="text-align: center">傅斯年</td>
+      <td style="text-align: center">2018-6</td>
+      <td style="text-align: center">2018-6</td>
+      <td style="text-align: center">历史学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">城记</td>
+      <td style="text-align: center">王军</td>
+      <td style="text-align: center">2018-6</td>
+      <td style="text-align: center">2018-6</td>
+      <td style="text-align: center">纪实文学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>图像中国建筑史</strong></td>
+      <td style="text-align: center">梁思成</td>
+      <td style="text-align: center">2018-6</td>
+      <td style="text-align: center"><strong>2018-6</strong></td>
+      <td style="text-align: center">建筑史</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">结构方程模型：方法与应用</td>
+      <td style="text-align: center">易丹辉</td>
+      <td style="text-align: center">2018-6</td>
+      <td style="text-align: center">2018-6</td>
+      <td style="text-align: center">量性分析方法</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>中国史纲要</strong></td>
+      <td style="text-align: center">张荫麟</td>
+      <td style="text-align: center">2018-6</td>
+      <td style="text-align: center">2018-6</td>
+      <td style="text-align: center">历史学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>微观经济学</strong></td>
+      <td style="text-align: center">曼昆</td>
+      <td style="text-align: center">2018-8</td>
+      <td style="text-align: center"><strong>2018-9</strong></td>
+      <td style="text-align: center">经济学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>宏观经济学</strong></td>
+      <td style="text-align: center">曼昆</td>
+      <td style="text-align: center">2018-9</td>
+      <td style="text-align: center"><strong>2018-10</strong></td>
+      <td style="text-align: center">经济学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">现代社会调查方法</td>
+      <td style="text-align: center">风笑天</td>
+      <td style="text-align: center">2018-7</td>
+      <td style="text-align: center"><strong>2018-7</strong></td>
+      <td style="text-align: center">量性分析方法</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">逻辑学</td>
+      <td style="text-align: center">中国人民大学</td>
+      <td style="text-align: center">2018-4</td>
+      <td style="text-align: center">2018-6</td>
+      <td style="text-align: center">逻辑学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>社会统计学</strong></td>
+      <td style="text-align: center">卢淑华</td>
+      <td style="text-align: center">2018-4</td>
+      <td style="text-align: center"><strong>2018-6</strong></td>
+      <td style="text-align: center">统计学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">国史大纲</td>
+      <td style="text-align: center">钱穆</td>
+      <td style="text-align: center">2018-7</td>
+      <td style="text-align: center">2018-8</td>
+      <td style="text-align: center">历史学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">古代汉语（4册）</td>
+      <td style="text-align: center">王力</td>
+      <td style="text-align: center">2018-7</td>
+      <td style="text-align: center">2018-12</td>
+      <td style="text-align: center">古代汉语</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">社会契约论</td>
+      <td style="text-align: center">卢梭</td>
+      <td style="text-align: center">2018-7</td>
+      <td style="text-align: center">2018-7</td>
+      <td style="text-align: center">政治学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">规划你的学术生涯</td>
+      <td style="text-align: center">温·格兰特（英）</td>
+      <td style="text-align: center">2018-5</td>
+      <td style="text-align: center">2018-5</td>
+      <td style="text-align: center">经验类</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>政治学</strong></td>
+      <td style="text-align: center">安德鲁·海伍德（英）</td>
+      <td style="text-align: center">2018-7</td>
+      <td style="text-align: center">2018-7</td>
+      <td style="text-align: center">政治学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">质性研究方法（引进版）</td>
+      <td style="text-align: center">莫妮卡（英）</td>
+      <td style="text-align: center">2018-7</td>
+      <td style="text-align: center"><strong>2018-7</strong></td>
+      <td style="text-align: center">质性研究方法</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>传播学基础</strong></td>
+      <td style="text-align: center">段鹏</td>
+      <td style="text-align: center">2018-7</td>
+      <td style="text-align: center"><strong>2018-8</strong></td>
+      <td style="text-align: center">传播学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">传播研究方法</td>
+      <td style="text-align: center">柯惠新等</td>
+      <td style="text-align: center">2018-7</td>
+      <td style="text-align: center"><strong>2018-7</strong></td>
+      <td style="text-align: center">传播学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">做工的人</td>
+      <td style="text-align: center">林立清</td>
+      <td style="text-align: center">2018-7</td>
+      <td style="text-align: center">2018-7</td>
+      <td style="text-align: center">纪实文学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">战争、枪炮与选票</td>
+      <td style="text-align: center">保罗·科利尔（英）</td>
+      <td style="text-align: center">2018-8</td>
+      <td style="text-align: center"><strong>2018-8</strong></td>
+      <td style="text-align: center">政治学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">读史阅世六十年</td>
+      <td style="text-align: center">何炳棣</td>
+      <td style="text-align: center">2018-8</td>
+      <td style="text-align: center">2018-8</td>
+      <td style="text-align: center">微观史</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>红雨：一个中国县域七世纪的暴力史</strong></td>
+      <td style="text-align: center">罗威廉（美）</td>
+      <td style="text-align: center">2018-8</td>
+      <td style="text-align: center">2018-8</td>
+      <td style="text-align: center">地方史</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>明清社会史论</strong></td>
+      <td style="text-align: center">何炳棣</td>
+      <td style="text-align: center">2018-8</td>
+      <td style="text-align: center">2018-8</td>
+      <td style="text-align: center">量性史学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">中国哲学简史</td>
+      <td style="text-align: center">冯友兰</td>
+      <td style="text-align: center">2018-8</td>
+      <td style="text-align: center"><strong>2018-8</strong></td>
+      <td style="text-align: center">哲学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">传习录</td>
+      <td style="text-align: center">王守仁</td>
+      <td style="text-align: center">2018-8</td>
+      <td style="text-align: center">2018-8</td>
+      <td style="text-align: center">哲学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>魏晋南北朝史讲演录</strong></td>
+      <td style="text-align: center">陈寅恪</td>
+      <td style="text-align: center">2018-9</td>
+      <td style="text-align: center">2018-9</td>
+      <td style="text-align: center">断代史</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">第三次浪潮</td>
+      <td style="text-align: center">阿尔文·托夫勒</td>
+      <td style="text-align: center">2018-11</td>
+      <td style="text-align: center">2018-11</td>
+      <td style="text-align: center">通俗读物</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">中国近代史</td>
+      <td style="text-align: center">李侃</td>
+      <td style="text-align: center">2018-9</td>
+      <td style="text-align: center">2018-10</td>
+      <td style="text-align: center">历史学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">曾文正公日记</td>
+      <td style="text-align: center">曾国藩</td>
+      <td style="text-align: center">2018-10</td>
+      <td style="text-align: center">2018-10</td>
+      <td style="text-align: center">微观史</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>思想史：从火到弗洛伊德（上、下）</strong></td>
+      <td style="text-align: center">彼得·沃森（英）</td>
+      <td style="text-align: center">2018-12</td>
+      <td style="text-align: center">2019-1</td>
+      <td style="text-align: center">思想史</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">人类简史</td>
+      <td style="text-align: center">尤瓦尔·赫拉利（以）</td>
+      <td style="text-align: center">2019-1</td>
+      <td style="text-align: center">2019-1</td>
+      <td style="text-align: center">历史学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">阳明学述要</td>
+      <td style="text-align: center">钱穆</td>
+      <td style="text-align: center">2018-8</td>
+      <td style="text-align: center">2018-8</td>
+      <td style="text-align: center">历史学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">瓦尔登湖</td>
+      <td style="text-align: center">戴维·梭罗（美）</td>
+      <td style="text-align: center">2018-10</td>
+      <td style="text-align: center">2018-10</td>
+      <td style="text-align: center">小说</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">中国近代史</td>
+      <td style="text-align: center">蒋廷黻</td>
+      <td style="text-align: center">2018-11</td>
+      <td style="text-align: center">2018-11</td>
+      <td style="text-align: center">历史学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">中国通史</td>
+      <td style="text-align: center">吕思勉</td>
+      <td style="text-align: center">2018-11</td>
+      <td style="text-align: center">2018-11</td>
+      <td style="text-align: center">历史学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>隋唐制度渊源略论稿</strong></td>
+      <td style="text-align: center">陈寅恪</td>
+      <td style="text-align: center">2018-10</td>
+      <td style="text-align: center">2018-10</td>
+      <td style="text-align: center">历史学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">思维导图</td>
+      <td style="text-align: center">巴利·博赞、东尼·博赞</td>
+      <td style="text-align: center">2018-11</td>
+      <td style="text-align: center">2018-11</td>
+      <td style="text-align: center">通俗读物</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">建构扎根理论</td>
+      <td style="text-align: center">卡麦兹</td>
+      <td style="text-align: center">2018-7</td>
+      <td style="text-align: center">2018-7</td>
+      <td style="text-align: center">质性研究方法</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">质性研究导引</td>
+      <td style="text-align: center">伍威·弗里克</td>
+      <td style="text-align: center">2018-7</td>
+      <td style="text-align: center">2018-7</td>
+      <td style="text-align: center">质性研究方法</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>中国大历史</strong></td>
+      <td style="text-align: center">黄仁宇</td>
+      <td style="text-align: center">2018-11</td>
+      <td style="text-align: center">2018-11</td>
+      <td style="text-align: center">历史学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">艺术的故事</td>
+      <td style="text-align: center">E·H·贡布里希</td>
+      <td style="text-align: center">2019-1</td>
+      <td style="text-align: center">2019-3</td>
+      <td style="text-align: center">艺术史</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">中国古代文化常识</td>
+      <td style="text-align: center">王力</td>
+      <td style="text-align: center">2018-10</td>
+      <td style="text-align: center">2018-10</td>
+      <td style="text-align: center">文化史</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>社会心理学</strong></td>
+      <td style="text-align: center">戴维·迈尔斯</td>
+      <td style="text-align: center">2019-1</td>
+      <td style="text-align: center">2019-3</td>
+      <td style="text-align: center">心理学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">乌合之众-大众心理研究</td>
+      <td style="text-align: center">勒庞</td>
+      <td style="text-align: center">2019-2</td>
+      <td style="text-align: center">2019-2</td>
+      <td style="text-align: center">心理学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">霍乱时期的爱情</td>
+      <td style="text-align: center">加西亚·马尔克斯</td>
+      <td style="text-align: center">2019-2</td>
+      <td style="text-align: center">2019-2</td>
+      <td style="text-align: center">小说</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">我们仨</td>
+      <td style="text-align: center">杨绛</td>
+      <td style="text-align: center">2018-9</td>
+      <td style="text-align: center">2018-9</td>
+      <td style="text-align: center">小说</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">在约定的场所——地下2</td>
+      <td style="text-align: center">村上春树</td>
+      <td style="text-align: center">2019-4</td>
+      <td style="text-align: center">2019-4</td>
+      <td style="text-align: center">小说</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">乡土中国</td>
+      <td style="text-align: center">费孝通</td>
+      <td style="text-align: center">2019-2</td>
+      <td style="text-align: center">2019-2</td>
+      <td style="text-align: center">社会学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">中国的一日</td>
+      <td style="text-align: center">茅盾等</td>
+      <td style="text-align: center">2019-3</td>
+      <td style="text-align: center"><strong>2019-3</strong></td>
+      <td style="text-align: center">纪实文学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">中国古代政治文化研究</td>
+      <td style="text-align: center">陈苏镇</td>
+      <td style="text-align: center">2018-10</td>
+      <td style="text-align: center">2018-10</td>
+      <td style="text-align: center">政治文化史</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>单向度的人——发达工业社会意识形态研究</strong></td>
+      <td style="text-align: center">赫伯特·马尔库塞</td>
+      <td style="text-align: center">2019-2</td>
+      <td style="text-align: center">2019-2</td>
+      <td style="text-align: center">哲学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>叫魂：1768年中国妖术大恐慌</strong></td>
+      <td style="text-align: center">孔飞力</td>
+      <td style="text-align: center">2019-2</td>
+      <td style="text-align: center">2019-2</td>
+      <td style="text-align: center">历史学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">亚洲史概述</td>
+      <td style="text-align: center">宫崎市定</td>
+      <td style="text-align: center">2019-2</td>
+      <td style="text-align: center">2019-2</td>
+      <td style="text-align: center">历史学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">黑铁时代</td>
+      <td style="text-align: center">王小波</td>
+      <td style="text-align: center">2019-2</td>
+      <td style="text-align: center">2019-2</td>
+      <td style="text-align: center">小说</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Beautiful Data</td>
+      <td style="text-align: center">O‘Reilly</td>
+      <td style="text-align: center">2019-4</td>
+      <td style="text-align: center">2019-4</td>
+      <td style="text-align: center">数据挖掘</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">大话数据结构</td>
+      <td style="text-align: center">程杰</td>
+      <td style="text-align: center">2019-5</td>
+      <td style="text-align: center"><strong>2019-5</strong></td>
+      <td style="text-align: center">算法</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>文凭社会</strong></td>
+      <td style="text-align: center">兰德尔·柯林斯</td>
+      <td style="text-align: center">2019-5</td>
+      <td style="text-align: center">2019-5</td>
+      <td style="text-align: center">社会学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>西方哲学史（上、下）</strong></td>
+      <td style="text-align: center">罗素</td>
+      <td style="text-align: center">2019-4</td>
+      <td style="text-align: center"><strong>2019-6</strong></td>
+      <td style="text-align: center">哲学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>郭象与魏晋玄学</strong></td>
+      <td style="text-align: center">汤一介</td>
+      <td style="text-align: center">2019-4</td>
+      <td style="text-align: center"><strong>2019-4</strong></td>
+      <td style="text-align: center">哲学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">东晋谢氏文学集团研究</td>
+      <td style="text-align: center">丁福林</td>
+      <td style="text-align: center">2019-5</td>
+      <td style="text-align: center">2019-5</td>
+      <td style="text-align: center">文学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">中古文人生活</td>
+      <td style="text-align: center">王瑶</td>
+      <td style="text-align: center">2019-5</td>
+      <td style="text-align: center">2019-5</td>
+      <td style="text-align: center">历史学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>特权：圣保罗中学的精英教育</strong></td>
+      <td style="text-align: center">Shamus Rahman Khan</td>
+      <td style="text-align: center">2019-6</td>
+      <td style="text-align: center">2019-6</td>
+      <td style="text-align: center">社会学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">超越自由与尊严</td>
+      <td style="text-align: center">斯金纳</td>
+      <td style="text-align: center">2019-6</td>
+      <td style="text-align: center">2019-6</td>
+      <td style="text-align: center">心理学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>生命的未来</strong></td>
+      <td style="text-align: center">爱德华·威尔逊</td>
+      <td style="text-align: center">2019-6</td>
+      <td style="text-align: center">2019-6</td>
+      <td style="text-align: center">博物学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>世间万物：与植物、星辰、动物的相遇</strong></td>
+      <td style="text-align: center">艾米·里奇</td>
+      <td style="text-align: center">2019-5</td>
+      <td style="text-align: center">2019-7</td>
+      <td style="text-align: center">博物学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>探索历史大数据：历史学家的宏观视角</strong></td>
+      <td style="text-align: center">肖恩·格雷厄姆等</td>
+      <td style="text-align: center">2019-5</td>
+      <td style="text-align: center"><strong>2019-6</strong></td>
+      <td style="text-align: center">历史学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">罗素自传（上、中、下）</td>
+      <td style="text-align: center">罗素</td>
+      <td style="text-align: center">2019-6</td>
+      <td style="text-align: center">2019-7</td>
+      <td style="text-align: center">人物传记</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">人生的意义</td>
+      <td style="text-align: center">特里·伊格尔顿</td>
+      <td style="text-align: center">2019-6</td>
+      <td style="text-align: center">2019-6</td>
+      <td style="text-align: center">哲学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>科学哲学</strong></td>
+      <td style="text-align: center">萨米尔·奥卡沙</td>
+      <td style="text-align: center">2019-6</td>
+      <td style="text-align: center"><strong>2019-6</strong></td>
+      <td style="text-align: center">科学史</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">社会学的意识</td>
+      <td style="text-align: center">史蒂夫·布鲁斯</td>
+      <td style="text-align: center">2019-7</td>
+      <td style="text-align: center">2019-7</td>
+      <td style="text-align: center">社会学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>禅与摩托车的维修艺术</strong></td>
+      <td style="text-align: center">罗伯特·博西格</td>
+      <td style="text-align: center">2019-6</td>
+      <td style="text-align: center"><strong>2019-6</strong></td>
+      <td style="text-align: center">哲学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">从惊讶到思考——数学悖论奇景</td>
+      <td style="text-align: center">马丁·加德纳</td>
+      <td style="text-align: center">2019-6</td>
+      <td style="text-align: center">2019-6</td>
+      <td style="text-align: center">数学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>数学之美</strong></td>
+      <td style="text-align: center">吴军</td>
+      <td style="text-align: center">2019-6</td>
+      <td style="text-align: center">2019-6</td>
+      <td style="text-align: center">计算机科学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">存在主义咖啡馆</td>
+      <td style="text-align: center">莎拉·贝克韦尔</td>
+      <td style="text-align: center">2019-6</td>
+      <td style="text-align: center">2019-6</td>
+      <td style="text-align: center">哲学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">计算社会科学：数字时代的社会科学</td>
+      <td style="text-align: center">腾讯研究院</td>
+      <td style="text-align: center">2019-5</td>
+      <td style="text-align: center">2019-5</td>
+      <td style="text-align: center">计算机科学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">江城</td>
+      <td style="text-align: center">彼得·海勒斯</td>
+      <td style="text-align: center">2019-5</td>
+      <td style="text-align: center">2019-5</td>
+      <td style="text-align: center">纪实文学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>人为什么活着</strong></td>
+      <td style="text-align: center">王小波</td>
+      <td style="text-align: center">2019-6</td>
+      <td style="text-align: center">2019-6</td>
+      <td style="text-align: center">文学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Hadoop权威指南</td>
+      <td style="text-align: center">Tom White</td>
+      <td style="text-align: center">2019-5</td>
+      <td style="text-align: center"><strong>2019-7</strong></td>
+      <td style="text-align: center">计算机科学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">ElasticSearch权威指南</td>
+      <td style="text-align: center">clinton gormley等</td>
+      <td style="text-align: center">2019-6</td>
+      <td style="text-align: center">2019-6</td>
+      <td style="text-align: center">计算机科学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">数据密集型应用系统设计</td>
+      <td style="text-align: center">马丁·科勒普曼</td>
+      <td style="text-align: center">2019-7</td>
+      <td style="text-align: center"><strong>2019-7</strong></td>
+      <td style="text-align: center">计算机科学</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">政治的历史与边界</td>
+      <td style="text-align: center">肯尼斯·米诺格</td>
+      <td style="text-align: center">2019-7</td>
+      <td style="text-align: center">2019-7</td>
+      <td style="text-align: center">政治学</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="后记">后记</h1>
+
+<p>还有许多大部头的，我仍没有啃完的书籍，不敢收录其中，但在它们之中，十分有价值的书籍并不占少数，希望在下一年开出阅读清单的时候，我能够把他们收录其中。</p>
+
+<p>在找这份清单的头部图片的时候，我想起了我今年第一次去国家图书馆的经历，在浩瀚的书海中，我显得如此渺小，那些或旧或新的书籍里隐藏着一个又一个的故事等待人来解读。</p>
+
+
+                <hr style="visibility: hidden;">
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2019/07/25/Whale-4/" data-toggle="tooltip" data-placement="top" title="鲸 | Whale">
+                        Previous<br>
+                        <span>鲸 | Whale</span>
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+                <hr style="visibility: hidden;">
+
+                
+
+                
+            </div>  
+
+    <!-- Side Catalog Container -->
+        
+
+    <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+
+
+<section>
+    
+        <hr class="hidden-sm hidden-xs">
+    
+    <h5><a href="/archive/">FEATURED TAGS</a></h5>
+    <div class="tags">
+        
+        
+        
+        </a>
+        
+        
+                <a data-sort="0002" 
+                    href="/archive/?tag=%E5%8E%9F%E5%88%9B%E5%B0%8F%E8%AF%B4"
+                    title="原创小说"
+                    rel="4">原创小说
+    </div>
+</section>
+
+
+                <!-- Friends Blog -->
+                
+<hr>
+<h5>FRIENDS</h5>
+<ul class="list-inline">
+  
+  <li><a href="https://github.com/AliceSang369">AliceSang369's GitHub</a></li>
+  
+  <li><a href="https://github.com/Dang-h">Dang-h's GitHub</a></li>
+  
+</ul>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- add support for mathjax by voleking-->
+
+
+
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("//cdnjs.cloudflare.com/ajax/libs/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- SNS Link -->
+                
+
+
+<ul class="list-inline text-center">
+
+
+  
+  
+  
+  
+  
+  
+  <li>
+    <a target="_blank" href="https://github.com/835066087">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+</ul>
+
+                <p class="copyright text-muted">
+                    Copyright &copy; Mars Blog 2019
+                    <br>
+                    Powered by <a href="https://github.com/835066087">Mars Blog</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=huxpro&repo=huxpro.github.io&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<!-- Currently, only navbar scroll-down effect at desktop still depends on this -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js "></script>
+
+<!-- Service Worker -->
+
+<script src="/js/snackbar.js "></script>
+<script src="/js/sw-registration.js "></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!--
+     Because of the native support for backtick-style fenced code blocks
+     right within the Markdown is landed in Github Pages,
+     From V1.6, There is no need for Highlight.js,
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/
+     - https://github.com/jneen/rouge/wiki/list-of-supported-languages-and-lexers
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+
+
+
+<!--fastClick.js -->
+<script>
+    async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+
+<!-- Side Catalog -->
+
+
+
+<!-- Multi-Lingual -->
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>
