@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="不定时更新大数据技术文档，原创小说，以及有关于Digital History的一些文献翻译">
+    <meta name="keywords"  content="弦望晦朔,Rabbit,Digtal History, 大数据, 博客, 个人网站">
+    <meta name="theme-color" content="#000000">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="弦望晦朔的博客 | Maybe A Rabbit's Blog">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:description" content=""Mars就是Maybe A Rabbit's"">
+    
+    <meta property="og:image" content="http://localhost:4000/img/avatar-hux-ny.jpg">
+    <meta property="og:url" content="http://localhost:4000/">
+    <meta property="og:site_name" content="弦望晦朔的博客 | Maybe A Rabbit's Blog">
+    
+    <title>弦望晦朔的博客 | Maybe A Rabbit's Blog</title>
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/pwa/manifest.json">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/mars.ico">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="http://localhost:4000/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Mars Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li>
+                        <a href="/about/">About</a>
+                    </li>
+                    
+                    
+                    
+                    <li>
+                        <a href="/archive/">Archive</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    var __HuxNav__ = {
+        close: function(){
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        },
+        open: function(){
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+
+    // Bind Event
+    $toggle.addEventListener('click', function(e){
+        if ($navbar.className.indexOf('in') > 0) {
+            __HuxNav__.close()
+        }else{
+            __HuxNav__.open()
+        }
+    })
+
+    /**
+     * Since Fastclick is used to delegate 'touchstart' globally
+     * to hack 300ms delay in iOS by performing a fake 'click',
+     * Using 'e.stopPropagation' to stop 'touchstart' event from 
+     * $toggle/$collapse will break global delegation.
+     * 
+     * Instead, we use a 'e.target' filter to prevent handler
+     * added to document close HuxNav.  
+     *
+     * Also, we use 'click' instead of 'touchstart' as compromise
+     */
+    document.addEventListener('click', function(e){
+        if(e.target == $toggle) return;
+        if(e.target.className == 'icon-bar') return;
+        __HuxNav__.close();
+    })
+</script>
+
+
+    <!-- Page Header -->
+
+
+
+
+
+
+
+<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        
+        <div class="site-heading">
+        
+          <h1>Mars Blog</h1>
+          <span class="subheading">"Mars就是Maybe A Rabbit's"</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<!-- Main Content -->
+<div class="container">
+	<div class="row">
+        
+
+<!-- USE SIDEBAR -->
+    <!-- PostList Container -->
+    		<div class="
+                col-lg-8 col-lg-offset-1
+                col-md-8 col-md-offset-1
+                col-sm-12
+                col-xs-12
+                postlist-container
+            ">
+    			
+<div class="post-preview">
+    <a href="/2019/07/29/bigdataindex/">
+        <h2 class="post-title">
+            大数据技术文档索引
+        </h2>
+        
+        <h3 class="post-subtitle">
+            一个技术文档的索引页
+        </h3>
+        
+        <div class="post-content-preview">
+            
+                
+  本文转载自我的GitHub仓库Maybe A Rabbit
+
+
+写在最初
+
+这一篇技术文档最初是我发布在我的GitHub库中，在这个库里只有各式各样的思维导图，但我在再次复习的时候发现思维导图有时让人无法发现知识内部的逻辑，因而我决定在博客中，增加入文字说明的部分，不过具体的话应该会重点撰写Hadoop，Kafka，Hive，Hbase和Spark部分。
+
+参考书目会在各个框架的最后部...
+            
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by 弦望晦朔 on July 29, 2019
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/2019/07/26/List-1/">
+        <h2 class="post-title">
+            2018-2019年阅读与整理清单
+        </h2>
+        
+        <h3 class="post-subtitle">
+            一年的阅读与整理清单
+        </h3>
+        
+        <div class="post-content-preview">
+            
+                前言
+
+有一次答应桑桑说要把自己过去一年的书单发给她看，一来是为了告诉桑桑我在看些什么，二来是也作为自己的一个监督手段，结果一直拖延到了现在才整理出来。
+
+这份书单从2018年4月起，到2019年7月结束，作为一个阶段性总结。其中需要做说明的有三个部分，第一个部分，阅读书籍，每个人都会对书籍有自己的价值判断与取向，在已读书目中，我将自己推荐阅读的书进行加粗标识，至于推荐标志，我想一句话概括就...
+            
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by 弦望晦朔 on July 26, 2019
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/2019/07/25/Whale-4/">
+        <h2 class="post-title">
+            鲸 | Whale
+        </h2>
+        
+        <h3 class="post-subtitle">
+            1-4
+        </h3>
+        
+        <div class="post-content-preview">
+            
+                10
+
+我听到了孩子们的哭泣声，不止一个，有抽泣的，有放声大嚎的，偶尔还伴有几声歇斯底里的怪叫，我像是在一个空旷的空间，这些声音由远及近，打在这边的壁上，又一次推向远方。
+
+整个空间里回荡着这些声音，有些像是流浪的野狗受了伤发出的哼哼叫，有些像是精神错乱的猫在冬天的夜里不断地嗷。
+
+你们就在这里，只能在这里，继续哭吧。
+
+……
+
+我也在哭呀。
+
+11
+
+尽管我对陈有着一些不满，但毕竟陆才是我...
+            
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by 弦望晦朔 on July 25, 2019
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/2019/07/25/Whale-3/">
+        <h2 class="post-title">
+            鲸 | Whale
+        </h2>
+        
+        <h3 class="post-subtitle">
+            1-3
+        </h3>
+        
+        <div class="post-content-preview">
+            
+                7
+
+……
+
+一夜无梦。
+
+8
+
+那一天的最后，我把纸条交给了陈，并且拒绝了他继续探秘的邀请。在那之后，他也找过我许多次，但我始终无法挥去心中的恐惧和疑虑感，再加上对陈的不信任，我还是坚持拒绝了他。
+
+这有什么好进行解密的呢？说不定只是不知道哪个无聊人的恶作剧而已。坐在操场看台边上看着落日的我这么想到。
+
+操场上有人招手示意，我看了看附近，看台上就只有我一个人，是在对我打招呼嘛？尽管有这样的...
+            
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by 弦望晦朔 on July 25, 2019
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/2019/07/25/Whale-2/">
+        <h2 class="post-title">
+            鲸 | Whale
+        </h2>
+        
+        <h3 class="post-subtitle">
+            1-2
+        </h3>
+        
+        <div class="post-content-preview">
+            
+                4
+
+我不再抬头看那只遮住了太阳的鲸鱼，低下头，逐渐合上眼，打算平静的迎来这最后一刻。
+
+“不是说人死之前会像走马灯一样的回放这一生的剧情吗？”
+
+“……算了没法回放。”
+
+“究竟是哪里错了呢？……”
+
+“计算不应该有问题的，我们已经想到了所有的情况……”
+
+“……”
+
+“难道是……时间选择错误了？”
+
+“时间吗……？”
+
+想到这里，我猛地睁开了眼，看向原本是入口的地方，那里突然出现了一个巨...
+            
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by 弦望晦朔 on July 25, 2019
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/2019/07/25/Whale-1/">
+        <h2 class="post-title">
+            鲸 | Whale
+        </h2>
+        
+        <h3 class="post-subtitle">
+            1-1
+        </h3>
+        
+        <div class="post-content-preview">
+            
+                “昔者庄周梦为胡蝶，栩栩然胡蝶也，自喻适志与，不知周也。俄然觉，则蘧蘧然周也。不知周之梦为胡蝶与，胡蝶之梦为周与？周与胡蝶，则必有分矣。此之谓物化。”
+
+——《庄子·齐物论》
+
+1
+
+我时常分不清楚梦和现实。
+
+就像现在，在凌晨时分3点，我仰起头看着，从学校废弃的游泳馆里小小的泳池中一跃而出的巨大鲸鱼。随着它的跃出，它身后遮挡的月亮逐渐落下而太阳从东方快速升起，四周游泳馆的外壳渐渐消失，馆外...
+            
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by 弦望晦朔 on July 25, 2019
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/2019/07/25/Exploring-1/">
+        <h2 class="post-title">
+            探索历史大数据
+        </h2>
+        
+        <h3 class="post-subtitle">
+            Exploring Big Historical Data: The Historian's Macroscope
+        </h3>
+        
+        <div class="post-content-preview">
+            
+                1.前言
+
+当我看完《探索历史大数据：历史学家的宏观视角》（原书名：Exploring Big Historical Data : The Historian’s Macroscope）的第一章的时候，我就想着要给这本书里的内容做一个索引和整理了。如今距我开始阅读这本书已过去了很久的时间，我还是未能很好的掌握书中所介绍的所有方法和工具，这一方面，是因为我时间和精力的有限，另外一方面，也是因为...
+            
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by 弦望晦朔 on July 25, 2019
+    </p>
+</div>
+<hr>
+
+
+<!-- Pager -->
+
+
+    		</div>
+    <!-- Sidebar Container -->
+            <div class="
+                col-lg-3 col-lg-offset-0
+                col-md-3 col-md-offset-0
+                col-sm-12
+                col-xs-12
+                sidebar-container
+            ">
+                <!-- Featured Tags -->
+                
+
+
+<section>
+    
+    <h5><a href="/archive/">FEATURED TAGS</a></h5>
+    <div class="tags">
+        
+        
+        
+        </a>
+        
+        
+                <a data-sort="0003" 
+                    href="/archive/?tag=%E5%8E%9F%E5%88%9B%E5%B0%8F%E8%AF%B4"
+                    title="原创小说"
+                    rel="4">原创小说
+    </div>
+</section>
+
+
+                <!-- Short About -->
+                <section class="visible-md visible-lg">
+  <hr>
+  <h5><a href="/about/">ABOUT ME</a></h5>
+  <div class="short-about">
+    
+    <img src="/img/avatar-hux-ny.jpg" />
+    
+    
+    <p>这里就是我自成一方的小世界</p>
+    
+    <!-- SNS Link -->
+    
+
+
+<ul class="list-inline">
+
+
+  
+  
+  
+  
+  
+  
+  <li>
+    <a target="_blank" href="https://github.com/835066087">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+</ul>
+  </div>
+</section>
+
+                <!-- Friends Blog -->
+                
+<hr>
+<h5>FRIENDS</h5>
+<ul class="list-inline">
+  
+  <li><a href="https://github.com/AliceSang369">AliceSang369's GitHub</a></li>
+  
+  <li><a href="https://github.com/Dang-h">Dang-h's GitHub</a></li>
+  
+</ul>
+
+    		</div>
+        
+	</div>
+</div>
+
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- SNS Link -->
+                
+
+
+<ul class="list-inline text-center">
+
+
+  
+  
+  
+  
+  
+  
+  <li>
+    <a target="_blank" href="https://github.com/835066087">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+</ul>
+
+                <p class="copyright text-muted">
+                    Copyright &copy; Mars Blog 2019
+                    <br>
+                    Powered by <a href="https://github.com/835066087">Mars Blog</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=huxpro&repo=huxpro.github.io&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<!-- Currently, only navbar scroll-down effect at desktop still depends on this -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js "></script>
+
+<!-- Service Worker -->
+
+<script src="/js/snackbar.js "></script>
+<script src="/js/sw-registration.js "></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!--
+     Because of the native support for backtick-style fenced code blocks
+     right within the Markdown is landed in Github Pages,
+     From V1.6, There is no need for Highlight.js,
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/
+     - https://github.com/jneen/rouge/wiki/list-of-supported-languages-and-lexers
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+
+
+
+<!--fastClick.js -->
+<script>
+    async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+
+<!-- Side Catalog -->
+
+
+
+<!-- Multi-Lingual -->
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>
