@@ -5,9 +5,330 @@
     <description>不定时更新大数据技术文档，原创小说，以及有关于Digital History的一些文献翻译</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 26 Jul 2019 19:36:39 +0800</pubDate>
-    <lastBuildDate>Fri, 26 Jul 2019 19:36:39 +0800</lastBuildDate>
+    <pubDate>Sun, 28 Jul 2019 23:21:32 +0800</pubDate>
+    <lastBuildDate>Sun, 28 Jul 2019 23:21:32 +0800</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>大数据技术文档索引</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;本文转载自我的GitHub仓库&lt;a href=&quot;https://github.com/835066087/Big-Data&quot;&gt;Maybe A Rabbit&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;写在最初&quot;&gt;写在最初&lt;/h1&gt;
+
+&lt;p&gt;这一篇技术文档最初是我发布在我的GitHub库中，在这个库里只有各式各样的&lt;code class=&quot;highlighter-rouge&quot;&gt;思维导图&lt;/code&gt;，但我在再次复习的时候发现&lt;code class=&quot;highlighter-rouge&quot;&gt;思维导图&lt;/code&gt;有时让人无法发现知识内部的逻辑，因而我决定在博客中，增加入文字说明的部分，不过具体的话应该会重点撰写&lt;code class=&quot;highlighter-rouge&quot;&gt;Hadoop&lt;/code&gt;，&lt;code class=&quot;highlighter-rouge&quot;&gt;Kafka&lt;/code&gt;，&lt;code class=&quot;highlighter-rouge&quot;&gt;Hive&lt;/code&gt;，&lt;code class=&quot;highlighter-rouge&quot;&gt;Hbase&lt;/code&gt;和&lt;code class=&quot;highlighter-rouge&quot;&gt;Spark&lt;/code&gt;部分。&lt;/p&gt;
+
+&lt;p&gt;参考书目会在各个框架的最后部分写明。&lt;/p&gt;
+
+&lt;h1 id=&quot;原文部分&quot;&gt;原文部分&lt;/h1&gt;
+
+&lt;p&gt;这是一份有关于大数据生态圈学习过程中各类知识点整理的思维导图集，最近一次更新为 &lt;strong&gt;190714&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;p&gt;在 &lt;strong&gt;2019年6月28日&lt;/strong&gt; 本库进行了一次大更新，主要从业务逻辑层面重组了思维导图存放的架构。&lt;/p&gt;
+
+&lt;p&gt;整个库分为 &lt;strong&gt;5&lt;/strong&gt; 大主要模块：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;00_装配文件&lt;/code&gt;：在此模块中，我对大数据相关软件在 &lt;code class=&quot;highlighter-rouge&quot;&gt;Linux&lt;/code&gt; 和 &lt;code class=&quot;highlighter-rouge&quot;&gt;Mac&lt;/code&gt; 环境下的安装进行了详细的说明，以确保大数据软件能够尽可能成功的运行在你的电脑上。&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;0.5_Shell&lt;/code&gt;：学习大数据究竟需不需要 &lt;code class=&quot;highlighter-rouge&quot;&gt;Shell&lt;/code&gt; 脚本基础，这取决于你自身，若没有 &lt;code class=&quot;highlighter-rouge&quot;&gt;Shell&lt;/code&gt; 脚本基础，也不妨碍你进行大数据的学习，若是拥有 &lt;code class=&quot;highlighter-rouge&quot;&gt;Shell&lt;/code&gt; 脚本基础，那么你在处理一些进程的时候，将会事半功倍。&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;01_数据源&lt;/code&gt;：这部分的思路是 &lt;code class=&quot;highlighter-rouge&quot;&gt;Docker （数据库安装环境）&lt;/code&gt;→ &lt;code class=&quot;highlighter-rouge&quot;&gt;Database （数据库）&lt;/code&gt;→&lt;code class=&quot;highlighter-rouge&quot;&gt; DataX （数据转换离线同步）&lt;/code&gt;，是一个从无到有的过程， &lt;code class=&quot;highlighter-rouge&quot;&gt;Database&lt;/code&gt; 部分目前（2019年6月28日）拥有&lt;code class=&quot;highlighter-rouge&quot;&gt; Oracle&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;MySQL&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;HBase&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;Redis&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;ClickHouse&lt;/code&gt;五个部分。&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;02_接入层&lt;/code&gt;：主要是&lt;code class=&quot;highlighter-rouge&quot;&gt;Flume&lt;/code&gt;和&lt;code class=&quot;highlighter-rouge&quot;&gt;Sqoop&lt;/code&gt;以及&lt;code class=&quot;highlighter-rouge&quot;&gt;Kafka&lt;/code&gt;。&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;03_数据处理层&lt;/code&gt;：这一层面的内容十分丰富，因而我又做了一次划分，主要分为五个部分:&lt;code class=&quot;highlighter-rouge&quot;&gt;数据存储：如HDFS&lt;/code&gt;，&lt;code class=&quot;highlighter-rouge&quot;&gt;数据计算：MapReduce及Spark&lt;/code&gt;，&lt;code class=&quot;highlighter-rouge&quot;&gt;数据查询：Hive及Impala&lt;/code&gt;，&lt;code class=&quot;highlighter-rouge&quot;&gt;任务调度：Oozie，Azkaban，Kettle等&lt;/code&gt;，&lt;code class=&quot;highlighter-rouge&quot;&gt;监控报警：Zookeeper&lt;/code&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;针对每一个框架，思维导图的思路如下：&lt;/p&gt;
+
+&lt;p&gt;1.每一个框架我都会整理两个文件：理论文件和代码文件。（如无代码文件需要我会专门说明）&lt;/p&gt;
+
+&lt;p&gt;2.在理论文件中，我会解释清楚每个框架运作的原理，相应需要注意的细节点。在此部分中将不会或很少会出现代码。&lt;/p&gt;
+
+&lt;p&gt;3.在代码文件中，基于理论文件的理解，我会将理论文件中每一部分的功能具体实现写明，以便于在工作中可以直接查询或使用。&lt;/p&gt;
+
+&lt;p&gt;说明：红色标记的是重要点&lt;/p&gt;
+
+&lt;p&gt;最后说一句我想说的话：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;理解原理或许很简单，但如何在理解原理以后根据它的原理去进行使用创新，是一件非常困难的事，经过了长久的学习以后并非旅程的终点，而是旅程的起点。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;索引&quot;&gt;索引&lt;/h1&gt;
+
+&lt;!-- TOC --&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#大数据软件装配&quot;&gt;1.大数据软件装配&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#Shell&quot;&gt;2.Shell&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#数据源&quot;&gt;3.数据源&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#Docker&quot;&gt;Docker&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#Database&quot;&gt;Database&lt;/a&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#MySQL&quot;&gt;MySQL&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#Oracle&quot;&gt;Oracle&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#Redis&quot;&gt;Redis&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#HBase&quot;&gt;HBase&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#ClickHouse&quot;&gt;ClickHouse&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#DataX&quot;&gt;DataX&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#接入层&quot;&gt;4.接入层&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#Flume&quot;&gt;Flume&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#Sqoop&quot;&gt;Sqoop&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#Kafka&quot;&gt;Kafka&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#数据处理层&quot;&gt;5.数据处理层&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#数据存储&quot;&gt;数据存储&lt;/a&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#HDFS&quot;&gt;HDFS&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#Yarn&quot;&gt;Yarn&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#数据计算&quot;&gt;数据计算&lt;/a&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#MapReduce&quot;&gt;MapReduce&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#Spark&quot;&gt;Spark&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#数据查询&quot;&gt;数据查询&lt;/a&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#Hive&quot;&gt;Hive&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#Impala&quot;&gt;Impala&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#任务调度&quot;&gt;任务调度&lt;/a&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#Oozie&quot;&gt;Oozie&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#Azkaban&quot;&gt;Azkaban&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#Kettle&quot;&gt;Kettle&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#监控报警&quot;&gt;监控报警&lt;/a&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#Zookeeper&quot;&gt;Zookeeper&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- /TOC --&gt;
+
+&lt;h1 id=&quot;大数据软件装配&quot;&gt;大数据软件装配&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;工欲善其事，必先利其器。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;我的配置环境是：&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;CentOs 6.8&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Hadoop Apache 2.7.2&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Zookeeper 3.4.10&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Hive 1.2.1&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Flume 1.7.0&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Kafka 2.11-0.11.0.2&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;HBase 1.3.1&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Sqoop 1.4.6&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Oozie 4.0.0&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Azkaban 2.5.0&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ClickHouse 19.7.3.9&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;DataX&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Oracle 18.3.0(这部分内容在Docker中)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;MogoDB 4.0.10&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;shell&quot;&gt;Shell&lt;/h1&gt;
+
+&lt;p&gt;本框架内部所做的&lt;code class=&quot;highlighter-rouge&quot;&gt;Shell&lt;/code&gt;思维导图仅仅是一个简单的入门，学习结束以后可以看懂基本的脚本流程，和撰写一些简单的脚本，更深入的推荐去看&lt;code class=&quot;highlighter-rouge&quot;&gt;Linux命令行与shell脚本编程大全&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/post/bigdata/Shell.png&quot; alt=&quot;Shell&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;数据源&quot;&gt;数据源&lt;/h1&gt;
+
+&lt;h2 id=&quot;docker&quot;&gt;Docker&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Docker&lt;/code&gt;是一个解决了运行环境和配置问题的软件容器，主要由三部分组成，&lt;code class=&quot;highlighter-rouge&quot;&gt;镜像（Image）&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;容器(Container)&lt;/code&gt;、以及 &lt;code class=&quot;highlighter-rouge&quot;&gt;仓库(Repository)&lt;/code&gt; ，我使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;Docker&lt;/code&gt; 的主要目的是在&lt;code class=&quot;highlighter-rouge&quot;&gt;Mac&lt;/code&gt;系统上安装&lt;code class=&quot;highlighter-rouge&quot;&gt;Oracle&lt;/code&gt;，因而在&lt;code class=&quot;highlighter-rouge&quot;&gt;Docker&lt;/code&gt;的文档中，如何安装与使用是我的重点。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/post/bigdata/Docker.png&quot; alt=&quot;Docker&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;database&quot;&gt;Database&lt;/h2&gt;
+
+&lt;h3 id=&quot;mysql&quot;&gt;MySQL&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;MySQL&lt;/code&gt;目前需要更新的地方仍然很多，目前有一份依照&lt;code class=&quot;highlighter-rouge&quot;&gt;DDL、DML及DCL&lt;/code&gt;思路进行制作的说明文档。&lt;/p&gt;
+
+&lt;h3 id=&quot;oracle&quot;&gt;Oracle&lt;/h3&gt;
+
+&lt;p&gt;暂无&lt;/p&gt;
+
+&lt;h3 id=&quot;redis&quot;&gt;Redis&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Redis&lt;/code&gt;是一个开源的&lt;code class=&quot;highlighter-rouge&quot;&gt;key-value&lt;/code&gt;式存储系统，配合关系型数据库做高速缓存，由于其拥有持久化能力,利用其多样的数据结构存储特定的数据是它的两个主要用途。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/post/bigdata/Redis.png&quot; alt=&quot;Redis&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;hbase&quot;&gt;HBase&lt;/h3&gt;
+
+&lt;h4 id=&quot;理论文件&quot;&gt;理论文件&lt;/h4&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;HBase&lt;/code&gt; 作为基于 &lt;code class=&quot;highlighter-rouge&quot;&gt;hadoop&lt;/code&gt; 的 &lt;code class=&quot;highlighter-rouge&quot;&gt;NoSQL&lt;/code&gt; 数据库，其原理性和操作性的要求都比较强，在原理阶段讲解了 &lt;code class=&quot;highlighter-rouge&quot;&gt;HBase&lt;/code&gt; 的逻辑结构和物理存储结构，以及针对于其结构进行优化的的操作手段。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/post/bigdata/HBase.png&quot; alt=&quot;HBase&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;代码文件&quot;&gt;代码文件&lt;/h4&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;HBase&lt;/code&gt;的代码文件是基于&lt;code class=&quot;highlighter-rouge&quot;&gt;HbaseAPI&lt;/code&gt;操作搭建了一个微博项目，项目源码已写好，但具体分析文件还在制作中。&lt;/p&gt;
+
+&lt;h3 id=&quot;clickhouse&quot;&gt;ClickHouse&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ClickHouse&lt;/code&gt;能够使用&lt;code class=&quot;highlighter-rouge&quot;&gt;SQL&lt;/code&gt;查询实时生成分析数据报告，主要用于在线分析处理查询。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/post/bigdata/ClickHouse.png&quot; alt=&quot;ClickHouse&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;datax&quot;&gt;DataX&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;DataX&lt;/code&gt;是一个异构数据源离线同步工具，致力于实现各种数据库间的数据同步功能，它的框架设计与&lt;code class=&quot;highlighter-rouge&quot;&gt;Flume&lt;/code&gt;有些类似，通过&lt;code class=&quot;highlighter-rouge&quot;&gt;Reader&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;Framework&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;Writer&lt;/code&gt;进行数据的转换同步，它的使用重点在于通过&lt;code class=&quot;highlighter-rouge&quot;&gt;json&lt;/code&gt;的配置文件设定执行任务。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/post/bigdata/DataX.png&quot; alt=&quot;DataX&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;接入层&quot;&gt;接入层&lt;/h1&gt;
+
+&lt;h2 id=&quot;flume&quot;&gt;Flume&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Flume&lt;/code&gt;是一个基于流式架构数据采集、聚合和传输系统，因而它实用性较强，通过&lt;code class=&quot;highlighter-rouge&quot;&gt;Source&lt;/code&gt; ，&lt;code class=&quot;highlighter-rouge&quot;&gt;Channel&lt;/code&gt;，&lt;code class=&quot;highlighter-rouge&quot;&gt;Sink&lt;/code&gt; 进行控制。所以我把它理论和代码文件归并。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/post/bigdata/Flume.png&quot; alt=&quot;Flume&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;sqoop&quot;&gt;Sqoop&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Sqoop&lt;/code&gt; 是一个用于 &lt;code class=&quot;highlighter-rouge&quot;&gt;Hadoop&lt;/code&gt; 和关系型数据库数据互导的小框架，其原理就是讲导入导出操作译作 &lt;code class=&quot;highlighter-rouge&quot;&gt;MapReduce&lt;/code&gt; 语言，最关键的操作就是根据其语法进行脚本写作，因而理论与代码文件合并，同时整理出了 &lt;code class=&quot;highlighter-rouge&quot;&gt;Sqoop&lt;/code&gt; 的常用命令。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/post/bigdata/Sqoop.png&quot; alt=&quot;image-20190628211439618&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;kafka&quot;&gt;Kafka&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Kafka&lt;/code&gt;的用途多种多样，并不只局限于数据接入一种，它可以进行日志收集，消息系统，用户活动跟踪，流式处理等，要理解&lt;code class=&quot;highlighter-rouge&quot;&gt;Kafka&lt;/code&gt;，首先要了解它的架构运行，其次了解它的文件存储机制。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/post/bigdata/Kafka.png&quot; alt=&quot;Kafka&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;数据处理层&quot;&gt;数据处理层&lt;/h1&gt;
+
+&lt;h2 id=&quot;数据存储&quot;&gt;数据存储&lt;/h2&gt;
+
+&lt;h3 id=&quot;hdfs&quot;&gt;HDFS&lt;/h3&gt;
+
+&lt;h4 id=&quot;理论文件-1&quot;&gt;理论文件&lt;/h4&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;HDFS&lt;/code&gt; 是 &lt;code class=&quot;highlighter-rouge&quot;&gt;Hadoop&lt;/code&gt; 的基石，因此我把 &lt;code class=&quot;highlighter-rouge&quot;&gt;Hadoop&lt;/code&gt; 的概述与它进行了合并，作为一个小简介，从而引出 &lt;code class=&quot;highlighter-rouge&quot;&gt;HDFS&lt;/code&gt; ,&lt;code class=&quot;highlighter-rouge&quot;&gt;HDFS&lt;/code&gt;的主要部分在于理解&lt;code class=&quot;highlighter-rouge&quot;&gt;NN&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;DN&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;Client&lt;/code&gt;和&lt;code class=&quot;highlighter-rouge&quot;&gt;2NN&lt;/code&gt;的运行机制。&lt;/p&gt;
+
+&lt;p&gt;在2019年7月13日&lt;code class=&quot;highlighter-rouge&quot;&gt;HDFS理论文件&lt;/code&gt;进行了一次更新，将&lt;code class=&quot;highlighter-rouge&quot;&gt;HDFS&lt;/code&gt;架构，读写流程，以及&lt;code class=&quot;highlighter-rouge&quot;&gt;NN与2NN&lt;/code&gt;的关系纳入了&lt;code class=&quot;highlighter-rouge&quot;&gt;HDFS运作原理&lt;/code&gt;模块中，同时新增了&lt;code class=&quot;highlighter-rouge&quot;&gt;Hadoop压缩格式&lt;/code&gt;，及&lt;code class=&quot;highlighter-rouge&quot;&gt;Hadoop优化&lt;/code&gt;两个模块，完善了&lt;code class=&quot;highlighter-rouge&quot;&gt;HDFS&lt;/code&gt;的内容。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/post/bigdata/HDFS.png&quot; alt=&quot;HDFS&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;代码文件-1&quot;&gt;代码文件&lt;/h4&gt;
+
+&lt;p&gt;已更新，主要是&lt;code class=&quot;highlighter-rouge&quot;&gt;Hadoop&lt;/code&gt;在&lt;code class=&quot;highlighter-rouge&quot;&gt;shell&lt;/code&gt;命令行中的一些常用命令整理归纳&lt;/p&gt;
+
+&lt;h3 id=&quot;yarn&quot;&gt;Yarn&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Yarn&lt;/code&gt;是&lt;code class=&quot;highlighter-rouge&quot;&gt;Hadoop&lt;/code&gt;中的资源调度平台，在这一内容中的重点主要有&lt;code class=&quot;highlighter-rouge&quot;&gt;Yarn工作机制&lt;/code&gt;（以&lt;code class=&quot;highlighter-rouge&quot;&gt;MapReduce&lt;/code&gt;程序为例，详细的介绍了&lt;code class=&quot;highlighter-rouge&quot;&gt;Yarn&lt;/code&gt;的资源调度流程），&lt;code class=&quot;highlighter-rouge&quot;&gt;Yarn资源调度器&lt;/code&gt;(介绍了&lt;code class=&quot;highlighter-rouge&quot;&gt;Yarn&lt;/code&gt;的三种资源调度器)，以及&lt;code class=&quot;highlighter-rouge&quot;&gt;Yarn的资源推测执行机制&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/post/bigdata/Yarn.png&quot; alt=&quot;Yarn&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;数据计算&quot;&gt;数据计算&lt;/h2&gt;
+
+&lt;h3 id=&quot;mapreduce&quot;&gt;MapReduce&lt;/h3&gt;
+
+&lt;h4 id=&quot;理论文件-2&quot;&gt;理论文件&lt;/h4&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;MapReduce&lt;/code&gt; 是 &lt;code class=&quot;highlighter-rouge&quot;&gt;Hadoop&lt;/code&gt; 中的分布式计算系统，在之后的内容中，有许多框架都是基于 &lt;code class=&quot;highlighter-rouge&quot;&gt;MapReduce&lt;/code&gt; 所进行的，比如 &lt;code class=&quot;highlighter-rouge&quot;&gt;Oozie&lt;/code&gt; ，比如 &lt;code class=&quot;highlighter-rouge&quot;&gt;Hive&lt;/code&gt; ，因而理解 &lt;code class=&quot;highlighter-rouge&quot;&gt;MapReduce&lt;/code&gt; 的原理是非常必要的。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/post/bigdata/MR.png&quot; alt=&quot;MR&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;代码文件-2&quot;&gt;代码文件&lt;/h4&gt;
+
+&lt;p&gt;暂无&lt;/p&gt;
+
+&lt;h4 id=&quot;备注&quot;&gt;备注&lt;/h4&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;MapReduce&lt;/code&gt; 的知识框架整理方面，还是存在一些代码混杂于理论文件之中的情况，在接下来的版本中应该会对这一点进行更新。&lt;/p&gt;
+
+&lt;h3 id=&quot;spark&quot;&gt;Spark&lt;/h3&gt;
+
+&lt;p&gt;暂未更新&lt;/p&gt;
+
+&lt;h2 id=&quot;数据查询&quot;&gt;数据查询&lt;/h2&gt;
+
+&lt;h3 id=&quot;hive&quot;&gt;Hive&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Hive&lt;/code&gt; 的情况恰恰与 &lt;code class=&quot;highlighter-rouge&quot;&gt;Zookeeper&lt;/code&gt; 相反，&lt;code class=&quot;highlighter-rouge&quot;&gt;Hive&lt;/code&gt; 作为一个基于 &lt;code class=&quot;highlighter-rouge&quot;&gt;Hadoop&lt;/code&gt; 的数仓工具，其原理运作并不难，即底层基于 &lt;code class=&quot;highlighter-rouge&quot;&gt;MapRuduce&lt;/code&gt; 的类 &lt;code class=&quot;highlighter-rouge&quot;&gt;SQL&lt;/code&gt; 查询工具，因此 &lt;code class=&quot;highlighter-rouge&quot;&gt;Hive&lt;/code&gt; 更注重的是代码文件，其中 &lt;code class=&quot;highlighter-rouge&quot;&gt;4 ~ 9&lt;/code&gt; 章我以 &lt;code class=&quot;highlighter-rouge&quot;&gt;sql&lt;/code&gt; 整理出来。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Hive理论文档&lt;/code&gt;在2019年7月14日又进行了一次更新，这次更新主要是增加了其与数据库的关系、保存元数据的方式，以及针对压缩和调优，进行了一次总结。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/post/bigdata/Hive.png&quot; alt=&quot;Hive&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;impala&quot;&gt;Impala&lt;/h3&gt;
+
+&lt;p&gt;暂未更新&lt;/p&gt;
+
+&lt;h2 id=&quot;任务调度&quot;&gt;任务调度&lt;/h2&gt;
+
+&lt;h3 id=&quot;oozie&quot;&gt;Oozie&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Oozie&lt;/code&gt; 是一个任务调度的小框架，其原理是把&lt;code class=&quot;highlighter-rouge&quot;&gt; xml&lt;/code&gt; 语言转译为&lt;code class=&quot;highlighter-rouge&quot;&gt; mapreduce&lt;/code&gt; 程序来做，但 &lt;code class=&quot;highlighter-rouge&quot;&gt;Oozie1&lt;/code&gt; 只有&lt;code class=&quot;highlighter-rouge&quot;&gt; Map &lt;/code&gt;阶段，此处我们归纳总结的是&lt;code class=&quot;highlighter-rouge&quot;&gt; Oozie1&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/post/bigdata/Oozie.png&quot; alt=&quot;Oozie&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;azkaban&quot;&gt;Azkaban&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Azkaban&lt;/code&gt;作为任务调度框架，其易用性无论从环境配置上来讲，以及配置文件的撰写上来讲，都要比&lt;code class=&quot;highlighter-rouge&quot;&gt;Oozie&lt;/code&gt;更好。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/post/bigdata/Azkaban.png&quot; alt=&quot;Azkaban&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;kettle&quot;&gt;Kettle&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Kettle&lt;/code&gt;是一个可视化的&lt;code class=&quot;highlighter-rouge&quot;&gt;ETL工具&lt;/code&gt;，简单易上手，使用很轻松。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/post/bigdata/Kettle.png&quot; alt=&quot;Kettle&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;监控报警&quot;&gt;监控报警&lt;/h2&gt;
+
+&lt;h3 id=&quot;zookeeper&quot;&gt;Zookeeper&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Zookeeper&lt;/code&gt; 的主要目的是为了监控集群中的修改操作，它的架设与操作都非常简单，因此 &lt;code class=&quot;highlighter-rouge&quot;&gt;Zookeeper&lt;/code&gt; 只有理论文件，在理论中，尤其要注意理解的是它的监听器原理和选举机制（类 &lt;code class=&quot;highlighter-rouge&quot;&gt;Paxos&lt;/code&gt; 算法），此外，&lt;code class=&quot;highlighter-rouge&quot;&gt;Zookeeper&lt;/code&gt;的写数据流程也值得注意。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/post/bigdata/Zookeeper.png&quot; alt=&quot;Zookeeper&quot; /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 29 Jul 2019 07:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2019/07/29/bigdataindex/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/07/29/bigdataindex/</guid>
+        
+        <category>大数据</category>
+        
+        <category>技术文档</category>
+        
+        
+      </item>
     
       <item>
         <title>2018-2019年阅读与整理清单</title>
@@ -691,8 +1012,8 @@
 &lt;p&gt;在找这份清单的头部图片的时候，我想起了我今年第一次去国家图书馆的经历，在浩瀚的书海中，我显得如此渺小，那些或旧或新的书籍里隐藏着一个又一个的故事等待人来解读。&lt;/p&gt;
 </description>
         <pubDate>Fri, 26 Jul 2019 17:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2019/07/26/list-1/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/07/26/list-1/</guid>
+        <link>http://localhost:4000/2019/07/26/List-1/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/07/26/List-1/</guid>
         
         <category>读书清单</category>
         

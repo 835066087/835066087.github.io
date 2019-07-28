@@ -2,7 +2,7 @@
 layout:     post
 title:      "大数据技术文档索引"
 subtitle:   "一个技术文档的索引页"
-date:       2019-7-25 9:00:00
+date:       2019-7-28 23:00:00
 author:     "弦望晦朔"
 header-img: "img/post/post-bg-bigdata.jpg"
 tags:
@@ -137,7 +137,7 @@ tags:
 
 本框架内部所做的`Shell`思维导图仅仅是一个简单的入门，学习结束以后可以看懂基本的脚本流程，和撰写一些简单的脚本，更深入的推荐去看`Linux命令行与shell脚本编程大全`。
 
-![Shell](/Users/liuyuanjie/Documents/GitHub/Big-Data/README.assets/Shell.png)
+![Shell](/img/post/bigdata/Shell.png)
 
 
 
@@ -147,7 +147,7 @@ tags:
 
 `Docker`是一个解决了运行环境和配置问题的软件容器，主要由三部分组成，`镜像（Image）`、`容器(Container)`、以及 `仓库(Repository)` ，我使用 `Docker` 的主要目的是在`Mac`系统上安装`Oracle`，因而在`Docker`的文档中，如何安装与使用是我的重点。
 
-![Docker](/Users/liuyuanjie/Documents/GitHub/Big-Data/README.assets/Docker.png)
+![Docker](/img/post/bigdata/Docker.png)
 
 
 
@@ -165,7 +165,7 @@ tags:
 
 `Redis`是一个开源的`key-value`式存储系统，配合关系型数据库做高速缓存，由于其拥有持久化能力,利用其多样的数据结构存储特定的数据是它的两个主要用途。
 
-![Redis](/Users/liuyuanjie/Documents/GitHub/Big-Data/README.assets/Redis.png)
+![Redis](/img/post/bigdata/Redis.png)
 
 ### HBase
 
@@ -173,7 +173,7 @@ tags:
 
 `HBase` 作为基于 `hadoop` 的 `NoSQL` 数据库，其原理性和操作性的要求都比较强，在原理阶段讲解了 `HBase` 的逻辑结构和物理存储结构，以及针对于其结构进行优化的的操作手段。
 
-![HBase](/Users/liuyuanjie/Documents/GitHub/Big-Data/README.assets/HBase-1726554.png)
+![HBase](/img/post/bigdata/HBase.png)
 
 #### 代码文件
 
@@ -183,13 +183,13 @@ tags:
 
 `ClickHouse`能够使用`SQL`查询实时生成分析数据报告，主要用于在线分析处理查询。
 
-![ClickHouse](/Users/liuyuanjie/Documents/GitHub/Big-Data/README.assets/ClickHouse.png)
+![ClickHouse](/img/post/bigdata/ClickHouse.png)
 
 ## DataX
 
 `DataX`是一个异构数据源离线同步工具，致力于实现各种数据库间的数据同步功能，它的框架设计与`Flume`有些类似，通过`Reader`、`Framework`、`Writer`进行数据的转换同步，它的使用重点在于通过`json`的配置文件设定执行任务。
 
-![DataX](/Users/liuyuanjie/Documents/GitHub/Big-Data/README.assets/DataX.png)
+![DataX](/img/post/bigdata/DataX.png)
 
 
 
@@ -199,19 +199,19 @@ tags:
 
 `Flume`是一个基于流式架构数据采集、聚合和传输系统，因而它实用性较强，通过`Source` ，`Channel`，`Sink` 进行控制。所以我把它理论和代码文件归并。
 
-![Flume](/Users/liuyuanjie/Documents/GitHub/Big-Data/README.assets/Flume-1727544.png)
+![Flume](/img/post/bigdata/Flume.png)
 
 ## Sqoop
 
 `Sqoop` 是一个用于 `Hadoop` 和关系型数据库数据互导的小框架，其原理就是讲导入导出操作译作 `MapReduce` 语言，最关键的操作就是根据其语法进行脚本写作，因而理论与代码文件合并，同时整理出了 `Sqoop` 的常用命令。
 
-![image-20190628211439618](/Users/liuyuanjie/Documents/GitHub/Big-Data/README.assets/image-20190628211439618.png)
+![image-20190628211439618](/img/post/bigdata/Sqoop.png)
 
 ## Kafka
 
 `Kafka`的用途多种多样，并不只局限于数据接入一种，它可以进行日志收集，消息系统，用户活动跟踪，流式处理等，要理解`Kafka`，首先要了解它的架构运行，其次了解它的文件存储机制。
 
-![Kafka](/Users/liuyuanjie/Documents/GitHub/Big-Data/README.assets/Kafka.png)
+![Kafka](/img/post/bigdata/Kafka.png)
 
 # 数据处理层
 
@@ -225,7 +225,7 @@ tags:
 
 在2019年7月13日`HDFS理论文件`进行了一次更新，将`HDFS`架构，读写流程，以及`NN与2NN`的关系纳入了`HDFS运作原理`模块中，同时新增了`Hadoop压缩格式`，及`Hadoop优化`两个模块，完善了`HDFS`的内容。
 
-![HDFS](/Users/liuyuanjie/Documents/GitHub/Big-Data/README.assets/HDFS-3188940.png)
+![HDFS](/img/post/bigdata/HDFS.png)
 
 #### 代码文件
 
@@ -237,7 +237,7 @@ tags:
 
 `Yarn`是`Hadoop`中的资源调度平台，在这一内容中的重点主要有`Yarn工作机制`（以`MapReduce`程序为例，详细的介绍了`Yarn`的资源调度流程），`Yarn资源调度器`(介绍了`Yarn`的三种资源调度器)，以及`Yarn的资源推测执行机制`。
 
-![Yarn](/Users/liuyuanjie/Documents/GitHub/Big-Data/README.assets/Yarn.png)
+![Yarn](/img/post/bigdata/Yarn.png)
 
 ## 数据计算
 
@@ -247,7 +247,7 @@ tags:
 
 `MapReduce` 是 `Hadoop` 中的分布式计算系统，在之后的内容中，有许多框架都是基于 `MapReduce` 所进行的，比如 `Oozie` ，比如 `Hive` ，因而理解 `MapReduce` 的原理是非常必要的。
 
-![MR](/Users/liuyuanjie/Documents/GitHub/Big-Data/README.assets/MR-1728080.png)
+![MR](/img/post/bigdata/MR.png)
 
 
 
@@ -275,7 +275,7 @@ tags:
 
 `Hive理论文档`在2019年7月14日又进行了一次更新，这次更新主要是增加了其与数据库的关系、保存元数据的方式，以及针对压缩和调优，进行了一次总结。
 
-![Hive](/Users/liuyuanjie/Documents/GitHub/Big-Data/README.assets/Hive-3192099.png)
+![Hive](/img/post/bigdata/Hive.png)
 
 ### Impala
 
@@ -287,19 +287,19 @@ tags:
 
 `Oozie` 是一个任务调度的小框架，其原理是把` xml` 语言转译为` mapreduce` 程序来做，但 `Oozie1` 只有` Map `阶段，此处我们归纳总结的是` Oozie1`。
 
-![Oozie](/Users/liuyuanjie/Documents/GitHub/Big-Data/README.assets/Oozie.png)
+![Oozie](/img/post/bigdata/Oozie.png)
 
 ### Azkaban
 
 `Azkaban`作为任务调度框架，其易用性无论从环境配置上来讲，以及配置文件的撰写上来讲，都要比`Oozie`更好。
 
-![Azkaban](/Users/liuyuanjie/Documents/GitHub/Big-Data/README.assets/Azkaban.png)
+![Azkaban](/img/post/bigdata/Azkaban.png)
 
 ### Kettle
 
 `Kettle`是一个可视化的`ETL工具`，简单易上手，使用很轻松。
 
-![Kettle](/Users/liuyuanjie/Documents/GitHub/Big-Data/README.assets/Kettle.png)
+![Kettle](/img/post/bigdata/Kettle.png)
 
 
 
@@ -309,5 +309,5 @@ tags:
 
 `Zookeeper` 的主要目的是为了监控集群中的修改操作，它的架设与操作都非常简单，因此 `Zookeeper` 只有理论文件，在理论中，尤其要注意理解的是它的监听器原理和选举机制（类 `Paxos` 算法），此外，`Zookeeper`的写数据流程也值得注意。
 
-![Zookeeper](/Users/liuyuanjie/Documents/GitHub/Big-Data/README.assets/Zookeeper-3191678.png)
+![Zookeeper](/img/post/bigdata/Zookeeper.png)
 
