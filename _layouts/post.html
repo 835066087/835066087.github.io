@@ -29,7 +29,7 @@ layout: default
                 </select>
                 {% endif %}
 
-				{{ content }}
+                {{ content }}
 
                 <hr style="visibility: hidden;">
                 <ul class="pager">
@@ -51,6 +51,13 @@ layout: default
                     {% endif %}
                 </ul>
                 <hr style="visibility: hidden;">
+
+
+                {% if site.livere %}
+                <!-- livere 评论栏 -->
+                <div id="lv-container" data-id="city" data-uid="MTAyMC80NTg4NS8yMjM5Ng==">
+                </div>
+                {% endif %}
 
                 {% if site.disqus_username %}
                 <!-- disqus 评论框 start -->
@@ -139,8 +146,8 @@ layout: default
 <!-- disqus 公共JS代码 end -->
 {% endif %}
 
+{% if site.livere %}
 <!-- 来必力City版安装代码 -->
-<div id="lv-container" data-id="city" data-uid="MTAyMC80NTg4NS8yMjM5Ng==">
     <script type="text/javascript">
    (function(d, s) {
        var j, e = d.getElementsByTagName(s)[0];
@@ -155,8 +162,10 @@ layout: default
    })(document, 'script');
     </script>
 <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
-</div>
 <!-- City版安装代码已完成 -->
+{% endif %}
+
+
 
 
 <!-- Git评论栏代码 -->
