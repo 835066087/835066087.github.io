@@ -37,6 +37,48 @@
     </div>
     <!-- /.container -->
 </nav>
+
+<!-- HTML elements for search-->
+
+<div id="search-container" style="float:right;position: fixed;right:0px; bottom:10px; z-index:999999;background:#eeeeee;padding:10px 10px 0px 10px;">
+  <input type="text" id="search-input" placeholder="search..." style="border:2px solid;border-radius:25px;padding-left:10px !important;" >
+  <ul id="results-container" style="max-width:300px;"></ul>
+</div>
+
+
+<!-- script pointing to jekyll-search.js-->
+<!--
+<html>
+    <head>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="search-box">
+            <input type="text" placeholder="Type to search" class="search-txt">
+            <a href="" class="search-btn">
+                    <i class="fas fa-search"></i>
+            </a>
+        </div>
+    </body>
+</html>
+-->
+
+<script src="{{ site.baseurl }}/js/simple-jekyll-search.min.js"></script>
+
+ <script>
+      window.simpleJekyllSearch = new SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '{{ site.baseurl }}/search.json',
+        searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+        noResultsText: 'No results found',
+        limit: 5,
+        fuzzy: false,
+        exclude: ['Welcome']
+      })
+    </script>
+
+
 <script>
     // Drop Bootstarp low-performance Navbar
     // Use customize navbar with high-quality material design animation

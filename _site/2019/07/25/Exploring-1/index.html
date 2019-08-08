@@ -117,6 +117,8 @@
                     
                     
                     
+                    
+                    
                 </ul>
             </div>
         </div>
@@ -124,6 +126,48 @@
     </div>
     <!-- /.container -->
 </nav>
+
+<!-- HTML elements for search-->
+
+<div id="search-container" style="float:right;position: fixed;right:0px; bottom:10px; z-index:999999;background:#eeeeee;padding:10px 10px 0px 10px;">
+  <input type="text" id="search-input" placeholder="search..." style="border:2px solid;border-radius:25px;padding-left:10px !important;" >
+  <ul id="results-container" style="max-width:300px;"></ul>
+</div>
+
+
+<!-- script pointing to jekyll-search.js-->
+<!--
+<html>
+    <head>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="search-box">
+            <input type="text" placeholder="Type to search" class="search-txt">
+            <a href="" class="search-btn">
+                    <i class="fas fa-search"></i>
+            </a>
+        </div>
+    </body>
+</html>
+-->
+
+<script src="/js/simple-jekyll-search.min.js"></script>
+
+ <script>
+      window.simpleJekyllSearch = new SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '/search.json',
+        searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+        noResultsText: 'No results found',
+        limit: 5,
+        fuzzy: false,
+        exclude: ['Welcome']
+      })
+    </script>
+
+
 <script>
     // Drop Bootstarp low-performance Navbar
     // Use customize navbar with high-quality material design animation
@@ -242,7 +286,7 @@
                 <!-- Multi-Lingual -->
                 
 
-				<h1 id="1前言">1.前言</h1>
+                <h1 id="1前言">1.前言</h1>
 
 <p>当我看完《探索历史大数据：历史学家的宏观视角》（原书名：<strong>Exploring Big Historical Data : The Historian’s Macroscope</strong>）的第一章的时候，我就想着要给这本书里的内容做一个索引和整理了。如今距我开始阅读这本书已过去了很久的时间，我还是未能很好的掌握书中所介绍的所有方法和工具，这一方面，是因为我时间和精力的有限，另外一方面，也是因为这本书所带来的方法和工具太过于繁多以至于无法在短期内完全消化。</p>
 
@@ -341,6 +385,13 @@
                 </ul>
                 <hr style="visibility: hidden;">
 
+
+                
+                <!-- livere 评论栏 -->
+                <div id="lv-container" data-id="city" data-uid="MTAyMC80NTg4NS8yMjM5Ng==">
+                </div>
+                
+
                 
 
                 
@@ -404,11 +455,36 @@
 
 
 
+
+<!-- 来必力City版安装代码 -->
+    <script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+    </script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+<!-- City版安装代码已完成 -->
+
+
+
+
+
+<!-- Git评论栏代码 -->
+<!--
 <div id="gitmentContainer"></div>
-<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<link rel="stylesheet" href="https://jjeejj.github.io/css/gitment.css">
+<script src="https://www.wenjunjiang.win/js/gitment.js"></script>
 <script>
 var gitment = new Gitment({
+    id: 48,
     owner: '835066087',
     repo: 'Comment_Repo',
     oauth: {
@@ -418,7 +494,7 @@ var gitment = new Gitment({
 });
 gitment.render('gitmentContainer');
 </script>
-
+-->
 
 
 <!-- async load function -->

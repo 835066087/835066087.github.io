@@ -113,6 +113,8 @@
                     
                     
                     
+                    
+                    
                 </ul>
             </div>
         </div>
@@ -120,6 +122,48 @@
     </div>
     <!-- /.container -->
 </nav>
+
+<!-- HTML elements for search-->
+
+<div id="search-container" style="float:right;position: fixed;right:0px; bottom:10px; z-index:999999;background:#eeeeee;padding:10px 10px 0px 10px;">
+  <input type="text" id="search-input" placeholder="search..." style="border:2px solid;border-radius:25px;padding-left:10px !important;" >
+  <ul id="results-container" style="max-width:300px;"></ul>
+</div>
+
+
+<!-- script pointing to jekyll-search.js-->
+<!--
+<html>
+    <head>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="search-box">
+            <input type="text" placeholder="Type to search" class="search-txt">
+            <a href="" class="search-btn">
+                    <i class="fas fa-search"></i>
+            </a>
+        </div>
+    </body>
+</html>
+-->
+
+<script src="/js/simple-jekyll-search.min.js"></script>
+
+ <script>
+      window.simpleJekyllSearch = new SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '/search.json',
+        searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+        noResultsText: 'No results found',
+        limit: 5,
+        fuzzy: false,
+        exclude: ['Welcome']
+      })
+    </script>
+
+
 <script>
     // Drop Bootstarp low-performance Navbar
     // Use customize navbar with high-quality material design animation
@@ -234,7 +278,7 @@
                 <!-- Multi-Lingual -->
                 
 
-				<h1 id="10">10</h1>
+                <h1 id="10">10</h1>
 
 <p>我听到了孩子们的哭泣声，不止一个，有抽泣的，有放声大嚎的，偶尔还伴有几声歇斯底里的怪叫，我像是在一个空旷的空间，这些声音由远及近，打在这边的壁上，又一次推向远方。</p>
 
@@ -376,6 +420,13 @@
                 </ul>
                 <hr style="visibility: hidden;">
 
+
+                
+                <!-- livere 评论栏 -->
+                <div id="lv-container" data-id="city" data-uid="MTAyMC80NTg4NS8yMjM5Ng==">
+                </div>
+                
+
                 
 
                 
@@ -439,11 +490,36 @@
 
 
 
+
+<!-- 来必力City版安装代码 -->
+    <script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+    </script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+<!-- City版安装代码已完成 -->
+
+
+
+
+
+<!-- Git评论栏代码 -->
+<!--
 <div id="gitmentContainer"></div>
-<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<link rel="stylesheet" href="https://jjeejj.github.io/css/gitment.css">
+<script src="https://www.wenjunjiang.win/js/gitment.js"></script>
 <script>
 var gitment = new Gitment({
+    id: 48,
     owner: '835066087',
     repo: 'Comment_Repo',
     oauth: {
@@ -453,7 +529,7 @@ var gitment = new Gitment({
 });
 gitment.render('gitmentContainer');
 </script>
-
+-->
 
 
 <!-- async load function -->
