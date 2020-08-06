@@ -5,7 +5,7 @@ header-img: img/home-bg.jpg
 email: maybearabbits@gmail.com
 description: "不定时更新大数据技术文档，原创小说，以及有关于Digital History的一些文献翻译"
 keyword: "弦望晦朔,Rabbit,Digtal History, 大数据, 博客, 个人网站"
-url: "https://835066087.github.io"              # your host, for absolute URL
+url: "https://835066087.github.io"             # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
@@ -13,11 +13,11 @@ future: true
 
 # SNS settings
 RSS: false
-#weibo_username:     huxpro
-#zhihu_username:     huxpro
+#weibo_username:     
+#zhihu_username:     
 github_username:    835066087
-#twitter_username:   huxpro
-#facebook_username:  huxpro
+#twitter_username:   
+#facebook_username:  
 #linkedin_username:  firstname-lastname-idxxxx
 
 
